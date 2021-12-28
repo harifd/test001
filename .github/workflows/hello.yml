@@ -1,0 +1,26 @@
+
+name: Hello my
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 运行hello
+        run: 输出helloWorld
+
+      - name: 运行多行hello
+        run: |
+          运行第一行,
+          运行第二行
